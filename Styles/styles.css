@@ -29,9 +29,9 @@ body{
 .page__inner{
     margin: 0 auto;
     height: fit-content;
-    width: 345px;
+    width: 95%;
     max-width: 1200px;
-    min-width: 325px;
+    min-width: 300px;
 }
 
 
@@ -44,10 +44,12 @@ body{
 }
 
 .header__inner{
+    margin: 0 auto;
     position: relative;
     display: flex;
     align-items: center;
     width: 100%;
+    max-width: 1300px;
     height: inherit;
     justify-content: space-between;
     padding: 0 15px;
@@ -103,6 +105,11 @@ body{
     color:var(--color-unselected);
 }
 
+.header__profile-info{
+    display: flex;
+    align-items: center;
+}
+
 .funds-wrap{
     padding: 4px;
     display: flex;
@@ -149,6 +156,27 @@ body{
     font-weight: normal;
     line-height: 0.75rem;
     color: var(--light-theme-typography);
+}
+
+.header__user-avatar{
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.header__user-avatar_img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.dropdwon-menu-icon{
+    display: none;
+    font-size: 24px;
+    line-height: 40px;
+    cursor: pointer;
 }
 
 /*task-list___________*/
