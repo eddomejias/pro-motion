@@ -58,6 +58,11 @@ body{
 .website-icon{
     display: flex;
     align-items: center;
+    cursor: pointer;
+}
+
+.website-icon:hover{
+    color: var(--color-primary);
 }
 
 .website-icon__img{
@@ -97,6 +102,14 @@ body{
     text-decoration: none;
 }
 
+.nav-item:hover{
+    color: var(--color-primary);
+}
+
+.nav-item:hover .icon{
+    color: var(--color-primary);
+}
+
 .icon{
     width: 28px;
     height: 28px;
@@ -130,6 +143,7 @@ body{
     border: none;
     border-radius: 8px;
     background-color: var(--color-primary);
+    cursor: pointer;
 }
 
 .buttom-ad-funds__icon{
@@ -178,12 +192,16 @@ body{
     line-height: 40px;
     cursor: pointer;
 }
-
+/* 
 /*task-list___________*/
+.task-list{
+    position: relative;
+}
+
 .task-list__wrap{
+    display: grid;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin: 20px 0 62px;
 }
@@ -202,6 +220,7 @@ body{
     border: none;
     border-radius: 15px;
     background-color: var(--bg-white-theme-lighter);
+    cursor: pointer;
 }
 
 .task-list__title{
@@ -211,12 +230,39 @@ body{
     color: var(--light-theme-typography);
 }
 
+.buttom-go-up{
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: var(--white-white-theme);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.buttom-go-up__icon{
+    display: block;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--color-unselected);
+    
+}
 /*task-tile___________*/
 
 .task-tile{
-    width: 165px;
-    height: 237px;
-    padding: 10px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1.31;
+    min-width: 147px;
+    min-height: 213px;
+    padding: 6.5%;
     background-color: var(--white-white-theme);
     border-radius: 15px;
 }
@@ -224,14 +270,16 @@ body{
 .task-tile__header{
     width: 100%;
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 10%;
 }
 
 .user-avatar{
     position: relative;
     margin-right: 5px;
-    width: 30px;
-    height: 30px;
+    max-width: 50px;
+    max-height: 50px;
+    width: 20%;
+    height: 20%;
 }
 
 .user-avatar__img{
@@ -266,28 +314,29 @@ body{
     font-size: 15px;
     line-height: 15px;
     color: var(--light-theme-typography-light);
+    cursor: pointer;
 }
 
 .task-tile__title{
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     font-weight: normal;
-    line-height: 1.5rem;
+    line-height: 1.2rem;
     letter-spacing: normal;
     color: var(--light-theme-typography);
 }
 
 .task-tile__text{
-    font-size: 0.62rem;
+    font-size: 0.58rem;
     font-weight: normal;
-    line-height: 0.62rem;
+    line-height: 0.58rem;
     letter-spacing: normal;
-    color: var(--light-theme-typography-light);
+    color: var(--light-theme-typography-light); 
 }
  
 .preview-image{
-    width: 145px;
-    height: 107px;
-    margin-bottom: 15px;
+    width: 100%;
+    height: 45.1476%;
+    margin-bottom: 10%;
 }
 
 .preview-image__img{
@@ -298,11 +347,51 @@ body{
 }
 
 .button{
-    height: 40px;
-    width: 145px;
+    width: 100%;
+    height: 16.877%;
+    /* aspect-ratio: 1 / 0.2758; */
     border: 2px var(--color-primary) solid;
     border-radius: 15px;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     font-weight: normal;
     color: var(--light-theme-typography);
 } 
+
+.button:hover{
+    background-color: var(--color-primary);
+    cursor: pointer;
+    color: var(--white-white-theme);
+}
+
+/*Footer _____________*/
+.footer{
+    display: none;
+}
+
+.footer__inner{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1300px;
+    height: inherit;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.footer__icon{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--light-theme-typography);
+}
+
+.footer__text{
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: var(--light-theme-typography);
+}

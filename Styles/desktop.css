@@ -1,0 +1,29 @@
+.task-list__wrap{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.task-tile__title{
+    font-size: 0.86rem;
+    line-height: 1.4rem;
+}
+
+.task-tile__text{
+    font-size: 0.85rem;
+    line-height: 0.85rem;
+}
+
+.button{
+    font-size: 0.9rem;
+} 
+
+.menu-icon{
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.user-avatar{
+    margin-right: 15px;
+}
